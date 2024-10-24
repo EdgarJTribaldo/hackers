@@ -143,6 +143,8 @@
             .header-content {
                 padding: 40px;
                 margin-top: 80px;
+                background-color: black;
+                color: white;
 
             }
 
@@ -214,6 +216,151 @@
             transform-origin: top center;
         }
     }
+
+   /* Estilos del slider */
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    flex: 0 0 100%; /* Cada item ocupa todo el ancho del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slider-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 15px;
+}
+
+.caption h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.caption p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Flechas de navegación */
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2rem;
+    transition: background-color 0.3s;
+}
+
+#slide-arrow-prev {
+    left: 10px;
+}
+
+#slide-arrow-next {
+    right: 10px;
+}
+
+.slide-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .slider-item {
+        flex: 0 0 100%;
+    }
+
+    .caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .caption p {
+        font-size: 0.9rem;
+    }
+}
+
+
+.container_pass {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#password-strength {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#criteria {
+    text-align: left;
+}
+
+#criteria ul {
+    list-style: none;
+    padding: 0;
+}
+
+#criteria li {
+    margin: 5px 0;
+    color: red;
+}
+
+.invalid {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
     </style>
 </head>
 <body>
@@ -359,8 +506,82 @@
             <text x="440" y="515" font-size="14" fill="#333">• Suplantación de identidad</text>
         </svg>
     </div>
+
+    <!--Galeria-->
+  <!-- Contenedor del Slider -->
+   <h2 style="text-align: center;">Casos de Hackers y Crackers</h2>
+  <section class="slider">
+    <button class="slide-arrow" id="slide-arrow-prev">&#10094;</button>
+
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slider-item">
+                <img src="./img/timberneslee.png" alt="Tim Berners-Lee">
+                <div class="caption">
+                    <h2>Tim Berners-Lee</h2>
+                    <p>Inventor de la World Wide Web, ejemplo de hacker ético.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./img/kevin_mitnick.png" alt="Kevin Mitnick">
+                <div class="caption">
+                    <h2>Kevin Mitnick</h2>
+                    <p>Uno de los crackers más conocidos por vulnerar sistemas de grandes corporaciones.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./img/richard_stallman.png" alt="Richard Stallman">
+                <div class="caption">
+                    <h2>Richard Stallman</h2>
+                    <p>Fundador del movimiento de software libre y hacker ético.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./img/guasno_morris.png" alt="Richard Stallman">
+                <div class="caption">
+                    <h2>Morris Worm</h2>
+                    <p>Primer gusano de Internet, causado por un error de cracking.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./img/albert_gonzales_cracker.png" alt="Richard Stallman">
+                <div class="caption">
+                    <h2>Albert Gonzalez</h2>
+                    <p>Cracker que robó millones de datos de tarjetas de crédito.</p>
+                </div>
+            </div>
+            <!-- Agregar más slider-item si es necesario -->
+        </div>
+    </div>
+
+    <button class="slide-arrow" id="slide-arrow-next">&#10095;</button>
+</section>
+
+<div class="container_pass">
+    <h2>Verificador de Contraseña Segura</h2>
+    
+    <label for="password">Ingresa tu contraseña:</label>
+    <input type="password" id="password" placeholder="Escribe tu contraseña aquí">
+    
+    <p id="password-strength"></p> <!-- Aquí mostraremos la fuerza de la contraseña -->
+    
+    <!-- Criterios de contraseña segura -->
+    <div id="criteria">
+        <p>La contraseña debe cumplir los siguientes criterios:</p>
+        <ul>
+            <li id="length" class="invalid">Al menos 8 caracteres</li>
+            <li id="uppercase" class="invalid">Una letra mayúscula</li>
+            <li id="lowercase" class="invalid">Una letra minúscula</li>
+            <li id="number" class="invalid">Un número</li>
+            <li id="special" class="invalid">Un carácter especial (!@#$%^&*)</li>
+        </ul>
+    </div>
+</div>
+
     <footer>
         <p>© 2024 - Exposición Educativa sobre Seguridad Informática</p>
     </footer>
+
+    <script src="/script.js"></script>
 </body>
 </html>
