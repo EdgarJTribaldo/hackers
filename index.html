@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackers vs Piratas Informáticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-content {
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .lottie-left, .lottie-right {
+            position: absolute;
+            top: 0;
+            width: 300px;
+            height: 300px;
+            z-index: 1;
+        }
+
+        .lottie-left {
+            left: 0;
+        }
+
+        .lottie-right {
+            right: 0;
+        }
+
+        .difference {
+            text-decoration: underline;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-bottom: 100px;
+        }
+        
+        .comparison {
+            display: flex;
+            gap: 20px;
+            margin: 40px 0;
+            text-align: start;
+        }
+        
+        .card {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .hacker {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+        }
+        
+        .cracker {
+            background-color: #ffebee;
+            border: 2px solid #f44336;
+        }
+        
+        .examples {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: start;
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .comparison {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 10px;
+                margin-bottom: 80px;
+            }
+
+            header {
+                min-height: 200px;
+                padding: 1rem 0;
+            }
+
+            .lottie-left, .lottie-right {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-content {
+                margin: 0 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .lottie-left, .lottie-right {
+                width: 100px;
+                height: 100px;
+            }
+
+            .header-content {
+                padding: 40px;
+                margin-top: 80px;
+
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .difference {
+                font-size: 0.9rem;
+            }
+        }
+
+        .svg-container {
+        width: 100%;
+        margin: 20px 0;
+        overflow: visible;
+    }
+
+    .svg-content {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        .svg-container {
+            margin-bottom: 120px; /* Aumentamos el margen inferior para evitar que el footer lo cubra */
+        }
+
+        .svg-content text {
+            font-size: 12px; /* Reducimos el tamaño del texto en móvil */
+        }
+
+        .svg-content text[font-size="24"] {
+            font-size: 16px;
+        }
+
+        .svg-content text[font-size="20"] {
+            font-size: 14px;
+        }
+
+        .svg-content text[font-size="16"] {
+            font-size: 12px;
+        }
+
+        .svg-content text[font-size="14"] {
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .svg-container {
+            margin-bottom: 150px;
+        }
+
+        .header-content {
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        .svg-content {
+            transform: scale(0.9);
+            transform-origin: top center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+        <dotlottie-player class="lottie-left" src="https://lottie.host/4fcdfe47-39d2-406a-94d8-d427c79f7d05/NaDL87v8TM.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        
+        <div class="header-content">
+            <h1>Hackers vs Piratas Informáticos</h1>
+            <p class="difference">Entendiendo las diferencias clave</p>
+        </div>
+
+        <dotlottie-player class="lottie-right" src="https://lottie.host/81259086-0470-4e54-9c4e-69385d5d6e8a/Q7lh0Qbj4B.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+    </header>
+
+    <div class="container">
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>Aunque frecuentemente se usan como sinónimos, existe una diferencia fundamental entre hackers y piratas informáticos (crackers).</p>
+        </section>
+
+        <section class="comparison">
+            <div class="card hacker">
+                <h2>Hacker</h2>
+                <ul>
+                    <li>Experto en tecnología y programación</li>
+                    <li>Busca mejorar la seguridad</li>
+                    <li>Trabaja de forma ética y legal</li>
+                    <li>Colabora con empresas y organizaciones</li>
+                    <li>Reporta vulnerabilidades</li>
+                    <li>Participa en programas de bug bounty</li>
+                </ul>
+            </div>
+
+            <div class="card cracker">
+                <h2>Pirata Informático</h2>
+                <ul>
+                    <li>Accede ilegalmente a sistemas</li>
+                    <li>Busca causar daño o obtener beneficio personal</li>
+                    <li>Actúa de forma maliciosa</li>
+                    <li>Roba información</li>
+                    <li>Instala malware</li>
+                    <li>Realiza actividades ilegales</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="examples">
+            <h2>Ejemplos de Actividades</h2>
+            
+            <h3>Actividades de Hackers Éticos:</h3>
+            <ul>
+                <li>Pruebas de penetración autorizadas</li>
+                <li>Auditorías de seguridad</li>
+                <li>Desarrollo de herramientas de seguridad</li>
+                <li>Investigación de vulnerabilidades</li>
+            </ul>
+
+            <h3>Actividades de Piratas Informáticos:</h3>
+            <ul>
+                <li>Robo de datos personales</li>
+                <li>Ataques de denegación de servicio</li>
+                <li>Distribución de ransomware</li>
+                <li>Phishing y estafas</li>
+            </ul>
+        </section>
+    </div>
+    <div class="svg-container">
+        <svg class="svg-content" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fondo -->
+            <rect width="800" height="600" fill="#f5f5f5"/>
+            
+            <!-- Título -->
+            <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+                Herramientas y Casos de Uso
+            </text>
+        
+            <!-- Columna Hackers -->
+            <rect x="50" y="80" width="340" height="480" fill="#e8f5e9" rx="10"/>
+            <text x="220" y="110" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">
+                Hackers Éticos (White Hat)
+            </text>
+        
+            <!-- Herramientas Hackers -->
+            <rect x="70" y="130" width="300" height="180" fill="white" rx="5"/>
+            <text x="220" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">
+                Herramientas
+            </text>
+            <text x="80" y="175" font-size="14" fill="#333">• Nmap (Escaneo de red)</text>
+            <text x="80" y="195" font-size="14" fill="#333">• Metasploit (Pruebas de penetración)</text>
+            <text x="80" y="215" font-size="14" fill="#333">• Wireshark (Análisis de tráfico)</text>
+            <text x="80" y="235" font-size="14" fill="#333">• Burp Suite (Testing de aplicaciones)</text>
+            <text x="80" y="255" font-size="14" fill="#333">• Kali Linux (Sistema operativo)</text>
+            <text x="80" y="275" font-size="14" fill="#333">• OpenVAS (Análisis de vulnerabilidades)</text>
+            <text x="80" y="295" font-size="14" fill="#333">• John the Ripper (Test de contraseñas)</text>
+        
+            <!-- Casos de Uso Hackers -->
+            <rect x="70" y="330" width="300" height="210" fill="white" rx="5"/>
+            <text x="220" y="350" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">
+                Casos de Uso
+            </text>
+            <text x="80" y="375" font-size="14" fill="#333">• Auditorías de seguridad autorizadas</text>
+            <text x="80" y="395" font-size="14" fill="#333">• Pruebas de penetración contratadas</text>
+            <text x="80" y="415" font-size="14" fill="#333">• Bug bounty programs</text>
+            <text x="80" y="435" font-size="14" fill="#333">• Análisis forense digital</text>
+            <text x="80" y="455" font-size="14" fill="#333">• Consultoría de seguridad</text>
+            <text x="80" y="475" font-size="14" fill="#333">• Desarrollo de herramientas seguras</text>
+            <text x="80" y="495" font-size="14" fill="#333">• Investigación de vulnerabilidades</text>
+            <text x="80" y="515" font-size="14" fill="#333">• Educación en ciberseguridad</text>
+        
+            <!-- Columna Piratas -->
+            <rect x="410" y="80" width="340" height="480" fill="#ffebee" rx="10"/>
+            <text x="580" y="110" text-anchor="middle" font-size="20" font-weight="bold" fill="#c62828">
+                Piratas Informáticos (Black Hat)
+            </text>
+        
+            <!-- Herramientas Piratas -->
+            <rect x="430" y="130" width="300" height="180" fill="white" rx="5"/>
+            <text x="580" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">
+                Herramientas Maliciosas
+            </text>
+            <text x="440" y="175" font-size="14" fill="#333">• Malware personalizado</text>
+            <text x="440" y="195" font-size="14" fill="#333">• Keyloggers</text>
+            <text x="440" y="215" font-size="14" fill="#333">• RATs (Acceso remoto)</text>
+            <text x="440" y="235" font-size="14" fill="#333">• Ransomware</text>
+            <text x="440" y="255" font-size="14" fill="#333">• Botnets</text>
+            <text x="440" y="275" font-size="14" fill="#333">• Phishing kits</text>
+            <text x="440" y="295" font-size="14" fill="#333">• Cryptojacking malware</text>
+        
+            <!-- Casos de Uso Piratas -->
+            <rect x="430" y="330" width="300" height="210" fill="white" rx="5"/>
+            <text x="580" y="350" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">
+                Actividades Maliciosas
+            </text>
+            <text x="440" y="375" font-size="14" fill="#333">• Robo de datos personales</text>
+            <text x="440" y="395" font-size="14" fill="#333">• Fraude financiero</text>
+            <text x="440" y="415" font-size="14" fill="#333">• Ataques DDoS</text>
+            <text x="440" y="435" font-size="14" fill="#333">• Secuestro de datos (Ransomware)</text>
+            <text x="440" y="455" font-size="14" fill="#333">• Espionaje industrial</text>
+            <text x="440" y="475" font-size="14" fill="#333">• Venta de datos robados</text>
+            <text x="440" y="495" font-size="14" fill="#333">• Cryptojacking</text>
+            <text x="440" y="515" font-size="14" fill="#333">• Suplantación de identidad</text>
+        </svg>
+    </div>
+    <footer>
+        <p>© 2024 - Exposición Educativa sobre Seguridad Informática</p>
+    </footer>
+</body>
+</html>
